@@ -9,6 +9,7 @@ const forecast = require('./utilies/forecast')
 
 
 const app = express()
+const port = process.env.port || 3000
 
 const dir = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../templet/view')
@@ -98,4 +99,4 @@ app.get('/about',(req,res)=>{
     })
 }) */
 
-app.listen(3000)
+app.listen(port)
